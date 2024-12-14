@@ -1,19 +1,10 @@
-import math
+from modul_4.fake_math import dividef as fake_divide
+from modul_4.true_math import dividef as true_divide
 
-from fake_math import dividef
-
-def dividem(first, second):
-    rez = first / second
-    if second != 0:
-        return rez
-    else:
-        return math.inf
-
-
-result1 = dividem(69, 3)
-result2 = dividem(3, 0)
-result3 = dividef(49, 7)
-result4 = dividef(15, 0)
+result1 = fake_divide(69, 3)
+result2 = fake_divide(3, 0)
+result3 = true_divide(49, 7)
+result4 = true_divide(15, 0)
 
 print(result1)
 print(result2)
