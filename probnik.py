@@ -3,7 +3,7 @@ class Vehicle:
     __COLOR_VARIANTS = ['blue', 'red', 'green', 'black', 'white'] # список допустимых цветов для окрашивания
     
                         # объекты класса и его атрибуты 
-    def __init__(self, owner, __model, __engine_power, __color):
+    def __init__(self, owner, __model, __color, __engine_power):
         self.owner = owner # владелец транспорта. (владелец может меняться) str
         self.__model = __model # модель (марка) транспорта. (мы не можем менять название модели)
         self.__engine_power = __engine_power # мощность двигателя. (мы не можем менять мощность двигателя самостоятельно)
