@@ -1,15 +1,16 @@
 class Vehicle:
+                        # Атрибут класса
+    __COLOR_VARIANTS = ['blue', 'red', 'green', 'black', 'white'] # список допустимых цветов для окрашивания
     
-    __COLOR_VARIANTS = ['blue', 'red', 'green', 'black', 'white']
-    
-    
+                        # объекты класса и его атрибуты 
     def __init__(self, owner, __model, __engine_power, __color):
-    
-        self.owner = owner
-        self.__model = __model
-        self.__engine_power = __engine_power
-        self.__color = __color
-    
+        self.owner = owner # владелец транспорта. (владелец может меняться) str
+        self.__model = __model # модель (марка) транспорта. (мы не можем менять название модели)
+        self.__engine_power = __engine_power # мощность двигателя. (мы не можем менять мощность двигателя самостоятельно)
+        self.__color = __color # название цвета. (мы не можем менять цвет автомобиля своими руками)
+        
+    # Методы get_model, get_horsepower, get_color находятся в одном классе с соответствующими им атрибутами: 
+    # __model, __engine_power, __color. Поэтому атрибуты будут доступны для методов.
     def get_model(self):
         print (f'Модель: {self.__model}')
         
@@ -19,22 +20,22 @@ class Vehicle:
     def get_color (self):
         print (f'Цвет: {self.__color}')
         
-    def print_info(self):
+    def print_info(self): # распечатывает результаты методов (ссылаясь на вышеперечисленные методы, через "класс"."объект"(self))
         Vehicle.get_model(self)
         Vehicle.get_horsepower(self)
         Vehicle.get_color(self)
         print(f'Владелец: {self.owner}')
         
-    def set_color(self, new_color):
-        if new_color.lower() in self.__COLOR_VARIANTS:
-            self.__color = new_color
+    def set_color(self, new_color): # принимает аргумент new_color, сравниваем new_color со списком допустимых цветов, если есть,
+        if new_color.lower() in self.__COLOR_VARIANTS:  # то self.__color принимает новый цвет, если нет, то принт
+            self.__color = new_color                    # Проверка в __COLOR_VARIANTS происходит не учитывая регистр (lower)
         else:
             print(f'Нельзя поменять цвет на {new_color}')
             
             
     
-class Sedan(Vehicle):
-    
+class Sedan(Vehicle): # Класс Sedan наследуется от класса Vehicle
+        # Атрибут класса Sedan 
     __PASSENGERS_LIMIT = 5
     
     
