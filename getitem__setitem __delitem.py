@@ -15,7 +15,7 @@ class Student:
         if 0 <= item < len(self.marks):
             return self.marks[item]
         else:
-            return (f'НЕВЕРНЫЙ ИНДЕКС')
+            return ('НЕВЕРНЫЙ ИНДЕКС')
         
     # ЧТО БЫ МЕНЯТЬ ОЦЕНКИ СТУДЕНТА, ТАК ЖЕ ПРОСТО ИСПОЛЬЗУЯ ИНДЕКС,
     # ИСПОЛЬЗУЕМ МЕТОД __setitem__
