@@ -5,8 +5,10 @@ class House:
         self.number_of_floors = number_of_floors
 
     def __eq__(self, other):
-        isinstance(other, House)
-        return self.number_of_floors == other.number_of_floors
+        if isinstance(other, House):
+            return self.number_of_floors == other.number_of_floors
+        elif isinstance(other, int):
+            return self.number_of_floors == other
 
     def __lt__(self, other):
         isinstance(other, House)
@@ -28,11 +30,12 @@ class House:
         isinstance(other, House)
         return self.number_of_floors != other.number_of_floors
 
-    def __add__(self, value):
-        if isinstance(value, int):
-            if isinstance(self.number_of_floors, int) and (self.number_of_floors + value):
-                self.number_of_floors += value
-                return self
+    def __add__(self, other):
+        if isinstance(other, House):
+            self.number_of_floors += other.number_of_floors
+        elif isinstance(other, int):
+            self.number_of_floors += other
+        return self
 
     def __radd__(self, value):
         if isinstance(value, int) and self.number_of_floors + value:
