@@ -41,9 +41,10 @@ class Bird(Animal):
 class AquaticAnimal(Animal):
     _DEGREE_OF_DANGER = 3
 
-    def dive_in(self, dz):  # dz - изменение координаты z в _cords
-        self._cords[2] = int(-abs(dz) * self.speed / 2)  # тут Z - отрицательная координата (под водой)
-                                                        # умноженная на скорость уменьшенную в 2 раза
+    def dive_in(self, dz): # ныряние под воду
+        self._cords[2] -= int(abs(dz) * self.speed / 2) # Скорость уменьшается в 2 раза
+        if self._cords[2] < 0:
+            self._cords[2] = 0 # Координата Z не может быть отрицательной
 
 class PoisonousAnimal(Animal):
     _DEGREE_OF_DANGER = 8
