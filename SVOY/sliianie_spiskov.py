@@ -14,8 +14,10 @@ def excluziv_item(*args, key = False): # списки (см.ниже (per, rew, 
         for y in i:
             if y not in new_list:    # если значение Y нет в списке new_list
                 new_list.append(y)
-    if key == True: # усли значение key является True, то будем сортировать список
+    if key == True:                # если значение key является True, то будем сортировать список
         new_list.sort()
+    else:                            # если значение key является False, то будем сортировать список
+        new_list.sort(reverse=True)   # в обратную сторону
         
     return new_list
 
@@ -26,5 +28,5 @@ xer = [1, 2, 3, 4, 5, 6, 7, 8]
 
 # вышеперечисленные списки будем передавать в переменную fuck_list
 # с помощью этой переменной и вызываем функцию
-fuck_list = excluziv_item(per, rew, xer, key = True)
+fuck_list = excluziv_item(per, rew, xer, key = False)
 print(fuck_list)
