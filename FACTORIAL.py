@@ -4,7 +4,7 @@ while True:
     count = 0
     y = 1
 
-    if x <= 0:
+    if x == 0:
         break
 
     while count < x:
