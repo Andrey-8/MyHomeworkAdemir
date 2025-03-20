@@ -11,5 +11,4 @@ while True:
         count += 1
         y *= count
     else:
-        print("факториал", x, "=", y)
-        print("0 - выход из цикла")
+        print(f"факториал {x} = {y}, 0 - выход из цикла")
