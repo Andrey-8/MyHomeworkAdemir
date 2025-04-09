@@ -29,6 +29,8 @@ honey_positions = [
 ]
 
 print_check(honey_positions)
+
+
 """# объявим функцию my_function()
 def my_function():
     ело функции (..какой-то код)
