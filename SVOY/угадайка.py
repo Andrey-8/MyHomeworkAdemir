@@ -11,9 +11,9 @@ while f:
         print(w)
     else:
         f = False
-        print("КОНЕЦ ИГРЫ")
+        print("СДАЛСЯ!! КОНЕЦ ИГРЫ")
     if w == d:
         f = False
-        print('УГАДАЛ!!!, конец игры')
+        print('КРАСАВЧЕГ УГАДАЛ!!!, конец игры')
 
 
