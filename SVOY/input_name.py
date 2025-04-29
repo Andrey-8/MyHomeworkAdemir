@@ -1,54 +1,5 @@
-def users():
-    user = input("введите имя: ")
-    for i in user:
-        if i not in (
-            "у",
-            "е",
-            "ы",
-            "а",
-            "о",
-            "э",
-            "я",
-            "и",
-            "ю",
-            "ё",
-            "А",
-            "Б",
-            "В",
-            "Г",
-            "Д",
-            "Е",
-            "Ё",
-            "Ж",
-            "З",
-            "И",
-            "Й",
-            "К",
-            "Л",
-            "М",
-            "Н",
-            "О",
-            "П",
-            "Р",
-            "С",
-            "Т",
-            "У",
-            "Ф",
-            "Х",
-            "Ц",
-            "Ч",
-            "Ш",
-            "Щ",
-            "Ы",
-            "Э",
-            "Ю",
-            "Я",
-        ):
-            return None
-        else:
-            return "добро пожаловать", user
-    return None
-
-
-f = users()
-print(f)
+def greet(name):
+    name = input("input name: ")
+    return f"hello {name}!" if name else None
+r = greet('Andr')
+print(r)
