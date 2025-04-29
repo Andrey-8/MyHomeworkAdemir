@@ -32,3 +32,8 @@ print(s1 > s2)  # сравнение на больше-меньше (вот ту
 print(ord("п"))
 # print(s00)
 # print(s01)
+
+# метод меняет все первые буквы в словах, на заглавные
+s = 'wqewqe dsfdf dvfdf'
+s = s.title()
+print(s)
