@@ -1,5 +1,5 @@
-def greet(name):
+def greet():
     name = input("input name: ")
     return f"hello {name}!" if name else None
-r = greet('Andr')
+r = greet()
 print(r)
