@@ -1,6 +1,9 @@
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import messagebox, END
 from random import choice
+
+from pygame.event import clear
+
 
 # Функция для проверки интуиции
 def check_guess():
@@ -21,10 +24,11 @@ def check_guess():
     except ValueError:
         messagebox.showerror("Ошибка", "Пожалуйста, введите целое число от 0 до 10.")
 
+
 # Создаем главное окно
 root = tk.Tk()
 root.title("Проверь свою интуицию")
-
+root.geometry("400x200")
 # Настраиваем элементы интерфейса
 label_instruction = tk.Label(root, text="Введите цифру от 0 до 10:")
 label_instruction.pack()
@@ -32,8 +36,10 @@ label_instruction.pack()
 entry = tk.Entry(root)
 entry.pack()
 
-button_check = tk.Button(root, text="Проверить", command=check_guess)
-button_check.pack()
+button_check = tk.Button(
+    root, text="Small Button", command=check_guess, width=20, height=5
+)
+button_check.pack(pady=10)
 
 label_result = tk.Label(root, text="")
 label_result.pack()
