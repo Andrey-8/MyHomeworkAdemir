@@ -18,6 +18,8 @@ def check_guess():
             if w == user_input:
                 messagebox.showinfo("Поздравляем!", "КРАСАВЧЕГ УГАДАЛ!!! Конец игры.")
                 root.quit()  # Закрываем приложение
+            elif w != user_input:
+                w = entry.delete(0,last=None)
         else:
             messagebox.showinfo("СДАЛСЯ!!", "КОНЕЦ ИГРЫ")
             root.quit()  # Закрываем приложение
@@ -77,3 +79,4 @@ root.mainloop() удерживает окно открытым.
 Скопируйте код в файл с расширением .py (например, intuition_game.py).
 Запустите файл из командной строки: python intuition_game.py.
 Вводите числа в графическом интерфейсе и проверяйте свою интуицию!"""
+
